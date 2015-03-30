@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>event and effect</title>
+	<script src="../jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('input:submit').click(function(event) {
+				//
+				event.preventDefault();
+
+				// gán text cho paragraph
+				$('#para').html('hello paragraph!');
+
+				// gán text cho textbox
+				$('#txt').val('hello textbox!');
+
+				// gán text cho textarea
+				// $('#txta').val('hello textarea!');
+				$('#txta').html('hello textarea!');
+
+				var easay = "Tôi yêu em đến nay chừng có thể\n";
+				easay += "Ngọn lửa tình chưa hẳng đã tàn phai\n";
+				easay += 'Nhưng không để em bận lòng thêm nữa\n';
+				easay += 'Hay hồn em phải gợn bóng u hoài\n';
+				$('#txtb').val(easay);
+
+				//kéo dãng textarea có động rộng 500 với tốc độ chậm
+				// $('#txtb').animate({'width': 500},'slow');
+				// $('#txtb').animate({'width': 500}, 2000);
+
+				//biến mất textarea sau 1s
+				// $('#txtb').fadeOut(1000);
+
+				//mở textarea đang cuộn hoặc cuộn textarea đang mở
+				$('#txtb').slideToggle(2000);
+
+			});//end submit click
+
+
+			$('input:submit').hover(function() {
+				$('#txt').val('in');
+			}, function() {
+				$('#txt').val('out');
+			}); // end input:submit hover
+
+			$('body,html').on('contextmenu', function(event) {
+				event.preventDefault();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<form action="" method="post">
+			<p id="para">this is paragraph!</p>
+			<p class="group">
+				<input type="text" name="txt" id="txt" />
+			</p>
+			<p class="group">
+				<textarea name="txta" id="txta" cols="30" rows="10"></textarea>
+			</p>
+			<p class="group">
+				<textarea name="txtb" id="txtb" cols="30" rows="10"></textarea>
+			</p>
+			<p class="group">
+				<input type="submit" value="gui"/>
+			</p>
+		</form> 
+	</div> <!-- end #wrapper -->
+	
+</body>
+</html>

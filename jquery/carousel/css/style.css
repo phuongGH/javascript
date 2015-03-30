@@ -1,0 +1,37 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper{
+	/*width: 1000px;*/
+	margin: 0px auto;
+}
+
+.img-switcher{
+	/*width: 800px;*/
+	margin: 0 auto;
+	position: relative;
+}
+
+.img-switcher img{
+	position: absolute; 
+	top: 0;
+	left: 0;
+}
+
+.img-switcher a.btn{
+	display: block;
+	position: absolute;
+	width: 95px;
+	height: 95px;
+	text-indent: -99999px;
+	background: url(../images/buttons_next_prev.png) 0 0 no-repeat;
+	top: 400px;
+}
+
+.img-switcher a#next{
+	right: 0px;
+	background-position: right top; 
+}
+

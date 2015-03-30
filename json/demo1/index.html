@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>json</title>
+	<script src="../../jquery/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#test').click(function(e) {
+				e.preventDefault();
+				$.ajax({
+					url: 'json.php',
+					// type: 'POST',
+					dataType: 'json',
+					// data: {param1: 'value1'},
+				
+					success: function(data){
+						alert(data.name);
+					}
+				});
+				// .done(function() {
+				// 	console.log("success");
+				// })
+				// .fail(function() {
+				// 	console.log("error");
+				// })
+				// .always(function() {
+				// 	console.log("complete");
+				// });
+				
+			});//end of a#test click
+		});//end of document ready
+	</script>
+</head>
+<body>
+	<div class="control">
+		<a href="#" id="test">load data</a>
+	</div>
+	<div id="rerult">
+		
+	</div>
+</body>
+</html>

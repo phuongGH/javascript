@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper{
+	width:1000px;
+	margin: 0 auto;
+	padding-top: 60px;
+}
+
+.tooltip{
+	text-align: center;
+	background-color: #635F5E;
+	width: 160px;
+	color: white;
+	line-height: 32px;
+	font-size: 16px;
+	position: absolute;
+	opacity: 0.8;
+	top: 0;
+	left: 0;
+}
